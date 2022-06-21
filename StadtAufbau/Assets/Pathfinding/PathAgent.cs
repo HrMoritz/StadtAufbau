@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class PathAgent : MonoBehaviour
 {
-    public Transform target;
     float speed = 2;
     Vector3[] path;
     int targetIndex;
-
-    private void Start()
-    {
-        PathRequestManager.RequestPath(transform.position, target.position, OnPathFound);
-    }
 
     public void OnPathFound(Vector3[] newPath, bool pathSuccessful)
     {
